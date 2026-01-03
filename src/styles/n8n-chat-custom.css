@@ -1,0 +1,174 @@
+/* -----------------------------------
+   ROOT VARIABLES (Branding)
+----------------------------------- */
+:root {
+  --n8n-primary: #2563eb; /* Juice blue */
+  --n8n-primary-hover: #1e40af;
+  --n8n-bg: #ffffff;
+  --n8n-text: #111827;
+  --n8n-muted: #6b7280;
+  --n8n-border: #e5e7eb;
+  --n8n-radius: 14px;
+  --n8n-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --n8n-font: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+}
+
+/* -----------------------------------
+   CHAT WINDOW
+----------------------------------- */
+.n8n-chat {
+  font-family: var(--n8n-font);
+  border-radius: var(--n8n-radius);
+  box-shadow: var(--n8n-shadow);
+  overflow: hidden;
+}
+
+/* Positioning (window mode) */
+.n8n-chat-window {
+  bottom: 90px !important;
+  right: 24px !important;
+  width: 360px !important;
+  max-height: 560px !important;
+  border-radius: var(--n8n-radius);
+}
+
+/* -----------------------------------
+   HEADER
+----------------------------------- */
+.n8n-chat-header {
+  background: var(--n8n-primary);
+  color: white;
+  padding: 14px 16px;
+}
+
+.n8n-chat-header-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.n8n-chat-header-subtitle {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Close button */
+.n8n-chat-header button {
+  color: white;
+  opacity: 0.85;
+}
+
+.n8n-chat-header button:hover {
+  opacity: 1;
+}
+
+/* -----------------------------------
+   MESSAGES AREA
+----------------------------------- */
+.n8n-chat-messages {
+  background: #f9fafb;
+  padding: 16px;
+}
+
+/* Bot message */
+.n8n-chat-message.bot {
+  background: white;
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: var(--n8n-text);
+  border: 1px solid var(--n8n-border);
+}
+
+/* User message */
+.n8n-chat-message.user {
+  background: var(--n8n-primary);
+  color: white;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+/* Message spacing */
+.n8n-chat-message + .n8n-chat-message {
+  margin-top: 10px;
+}
+
+/* -----------------------------------
+   INPUT AREA
+----------------------------------- */
+.n8n-chat-input-wrapper {
+  border-top: 1px solid var(--n8n-border);
+  padding: 12px;
+  background: white;
+}
+
+.n8n-chat-input {
+  border-radius: 9999px;
+  border: 1px solid var(--n8n-border);
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.n8n-chat-input:focus {
+  outline: none;
+  border-color: var(--n8n-primary);
+}
+
+/* Send button */
+.n8n-chat-send {
+  background: var(--n8n-primary);
+  color: white;
+  border-radius: 9999px;
+}
+
+.n8n-chat-send:hover {
+  background: var(--n8n-primary-hover);
+}
+
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
+.n8n-chat-footer {
+  font-size: 11px;
+  color: var(--n8n-muted);
+  padding: 6px 12px;
+  text-align: center;
+  background: white;
+}
+
+/* -----------------------------------
+   CHAT BUBBLE (Your Custom Icon)
+----------------------------------- */
+#n8n-chat {
+  pointer-events: auto;
+}
+
+/* Visual-only wrapper */
+.chat-button-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+  pointer-events: none;
+}
+
+/* -----------------------------------
+   ANIMATIONS
+----------------------------------- */
+.n8n-chat-window {
+  animation: n8n-chat-slide-up 0.3s ease-out;
+}
+
+@keyframes n8n-chat-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
