@@ -32,7 +32,7 @@ export function Card({
         <Icon className="h-6 w-6" />
       </div>
 
-      <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
+      <h3 className="text-lg font-semibold mb-2 dark:text-white">
         {title}
       </h3>
 
